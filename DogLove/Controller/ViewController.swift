@@ -15,22 +15,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var breeds: [String] = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.dataSource = self
         pickerView.delegate = self
         self.showSpinner(onView: self.view)
-        DogApi.requestAllBreeds(completionHandler: handleBreedsListResponse(breeds:error:))
+        if(breeds.count<1){
+                DogApi.requestAllBreeds(completionHandler: handleBreedsListResponse(breeds:error:))
+        }
+    
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
     }
-
     
     func handleBreedsListResponse(breeds: [String]?, error: Error?){
         self.breeds = breeds!
         DispatchQueue.main.async {
             self.pickerView.reloadAllComponents()
         }
+        //self.title = self.breeds[0].capitalized
         DogApi.requestRandomImage(breed: self.breeds[0], completionHandler: handleRandomImageResponse(imageData:error:))
     }
     
@@ -46,8 +50,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func handleImageFileResponse(image: UIImage?, error: Error?){
         DispatchQueue.main.async {
-            self.imageView.image = image
             self.removeSpinner()
+            self.imageView.image = image
+           
         }
     }
     
@@ -66,9 +71,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.showSpinner(onView: self.view)
+        self.title = self.breeds[row].capitalized
         DogApi.requestRandomImage(breed: breeds[row], completionHandler: handleRandomImageResponse(imageData:error:))
         
     }
+    
+    @objc func imageTapped(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ImageDetailsViewController") as! ImageDetailsViewController
+        vc.image = self.imageView.image
+        self.navigationController?.pushViewController(vc, animated: true)
+        //present(vc, animated: true, completion: nil)
+    }
+    
 }
 var vSpinner : UIView?
 extension UIViewController {
@@ -94,5 +108,8 @@ extension UIViewController {
             vSpinner = nil
         }
     }
+    
+    
+    
 }
 

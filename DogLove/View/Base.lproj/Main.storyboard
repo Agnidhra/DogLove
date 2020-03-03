@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MNo-B3-KZD">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DOGS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DogLove" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q06-dU-f2t">
-                                <rect key="frame" x="20" y="44" width="374" height="829"/>
+                                <rect key="frame" x="20" y="88" width="374" height="785"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RfB-Vb-tut">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="679"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-App-83.5x83.5" translatesAutoresizingMaskIntoConstraints="NO" id="RfB-Vb-tut">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="585"/>
                                     </imageView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eB1-NK-oap">
-                                        <rect key="frame" x="0.0" y="679" width="374" height="150"/>
+                                        <rect key="frame" x="0.0" y="585" width="374" height="200"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="U2B-Lq-exL"/>
+                                            <constraint firstAttribute="height" constant="200" id="U2B-Lq-exL"/>
                                         </constraints>
                                     </pickerView>
                                 </subviews>
@@ -36,7 +36,6 @@
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="eB1-NK-oap" firstAttribute="leading" secondItem="Q06-dU-f2t" secondAttribute="leading" id="9JJ-p8-Pbe"/>
-                                    <constraint firstItem="eB1-NK-oap" firstAttribute="top" secondItem="RfB-Vb-tut" secondAttribute="bottom" id="JTb-PX-5Mh"/>
                                     <constraint firstAttribute="bottom" secondItem="eB1-NK-oap" secondAttribute="bottom" id="PYm-6d-dkS"/>
                                     <constraint firstAttribute="trailing" secondItem="eB1-NK-oap" secondAttribute="trailing" id="uQb-Kd-Jdh"/>
                                 </constraints>
@@ -52,6 +51,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="DOGS" id="A3G-2V-N4L"/>
                     <connections>
                         <outlet property="imageView" destination="RfB-Vb-tut" id="aEA-Pb-A8M"/>
                         <outlet property="pickerView" destination="eB1-NK-oap" id="IDf-aj-TVk"/>
@@ -59,7 +59,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--ImageDetails-->
+        <scene sceneID="umC-du-l0E">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailsViewController" id="gr7-4w-52d" userLabel="ImageDetails" customClass="ImageDetailsViewController" customModule="DogLove" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NdB-tv-4dD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="xgI-HV-fzZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u23-nd-aRy">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nW9-VW-fX9" appends="YES" id="GJq-8z-hE1"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="u23-nd-aRy" secondAttribute="bottom" id="567-MI-b0e"/>
+                                    <constraint firstItem="u23-nd-aRy" firstAttribute="width" secondItem="xgI-HV-fzZ" secondAttribute="height" multiplier="207:448" id="69f-3C-ze6"/>
+                                    <constraint firstItem="u23-nd-aRy" firstAttribute="top" secondItem="xgI-HV-fzZ" secondAttribute="top" id="Ec2-tu-v8E"/>
+                                    <constraint firstAttribute="trailing" secondItem="u23-nd-aRy" secondAttribute="trailing" id="LqM-km-54O"/>
+                                    <constraint firstItem="u23-nd-aRy" firstAttribute="centerY" secondItem="xgI-HV-fzZ" secondAttribute="centerY" id="MBw-NT-Zil"/>
+                                    <constraint firstItem="u23-nd-aRy" firstAttribute="leading" secondItem="xgI-HV-fzZ" secondAttribute="leading" id="WoT-Dt-ZIH"/>
+                                    <constraint firstItem="u23-nd-aRy" firstAttribute="centerX" secondItem="xgI-HV-fzZ" secondAttribute="centerX" id="ZIK-mV-hWs"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="gr7-4w-52d" id="nSd-kb-Mgg"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="xgI-HV-fzZ" secondAttribute="trailing" id="T9c-Nh-0kr"/>
+                            <constraint firstItem="xgI-HV-fzZ" firstAttribute="top" secondItem="NdB-tv-4dD" secondAttribute="top" id="bBk-DK-8kH"/>
+                            <constraint firstItem="xgI-HV-fzZ" firstAttribute="leading" secondItem="NdB-tv-4dD" secondAttribute="leading" id="cVv-CW-L04"/>
+                            <constraint firstAttribute="bottom" secondItem="xgI-HV-fzZ" secondAttribute="bottom" id="lza-TV-ftG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8J4-Y2-xpG"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageDetails" destination="u23-nd-aRy" id="RI1-fb-8NC"/>
+                        <outlet property="imageScrollView" destination="xgI-HV-fzZ" id="cWL-aJ-j1G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTb-MI-ZTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="nW9-VW-fX9">
+                    <connections>
+                        <action selector="doubleTapImage:" destination="gr7-4w-52d" id="ibp-Bf-pou"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1863.7681159420292" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="asO-2u-488">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MNo-B3-KZD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oyI-XB-dc8">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rhp-pX-V9s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2e-o2-Cq9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Icon-App-83.5x83.5" width="83.5" height="83.5"/>
+    </resources>
 </document>

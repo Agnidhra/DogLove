@@ -13,6 +13,7 @@
 		611DA2DD2408ABBA0037FF18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 611DA2DC2408ABBA0037FF18 /* Assets.xcassets */; };
 		611DA2E02408ABBA0037FF18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 611DA2DE2408ABBA0037FF18 /* LaunchScreen.storyboard */; };
 		611DA2EB2408AEE70037FF18 /* DogApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611DA2EA2408AEE70037FF18 /* DogApi.swift */; };
+		616D04BD240C507E00828996 /* ImageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616D04BC240C507E00828996 /* ImageDetailsViewController.swift */; };
 		61985F4E240A27BE00E0CAAE /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61985F4D240A27BE00E0CAAE /* DogImage.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		611DA2DF2408ABBA0037FF18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		611DA2E12408ABBA0037FF18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		611DA2EA2408AEE70037FF18 /* DogApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogApi.swift; sourceTree = "<group>"; };
+		616D04BC240C507E00828996 /* ImageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailsViewController.swift; sourceTree = "<group>"; };
 		61985F4D240A27BE00E0CAAE /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			children = (
 				611DA2D52408ABAD0037FF18 /* AppDelegate.swift */,
 				611DA2D72408ABAD0037FF18 /* ViewController.swift */,
+				616D04BC240C507E00828996 /* ImageDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				611DA2D82408ABAD0037FF18 /* ViewController.swift in Sources */,
 				61985F4E240A27BE00E0CAAE /* DogImage.swift in Sources */,
 				611DA2D62408ABAD0037FF18 /* AppDelegate.swift in Sources */,
+				616D04BD240C507E00828996 /* ImageDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +325,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.DogLove;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Agnidhra.DogLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.DogLove;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Agnidhra.DogLove;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
